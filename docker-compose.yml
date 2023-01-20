@@ -1,0 +1,17 @@
+services:
+  proxy:
+    image: ferranhalborn/ctf_ad_proxy
+    environment:
+      - REDIRECT_PORT=6000
+      - LISTEN_PORT=80
+      - MASTER_IP=192.168.1.166
+    ports:
+      - "6000:80"
+
+  challenge1:
+    image: ferranhalborn/ctf_ad_base
+    environment:
+       - RESTRICTED_ACCOUNTS=["0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"]
+    volumes:
+      - "./challenge:/root/challenge"
+
