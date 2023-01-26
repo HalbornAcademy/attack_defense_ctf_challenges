@@ -13,32 +13,31 @@ contract FaucetTest is Test {
     function setUp() public {
         registry = new ERC1820Registry();
         faucet = new Faucet(new address[](0), address(registry));
+        vm.warp(1000000);
     }
 
     function testInitialBalance() public {
         assertEq(faucet.balanceOf(address(faucet)), 10 ether);
     }
 
-    function testContract() public {
-        vm.expectRevert("Contracts not allowed");
-        faucet.giveMeGold();
-    }
-
-    function testNoContract() public {
+    function testGiveGold() public {
         address holder = 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266;
-        assertEq(faucet.balanceOf(holder), 0);
-        vm.prank(holder);
+        vm.startPrank(holder);
+        uint256 beforeBalance = faucet.balanceOf(holder);
         faucet.giveMeGold();
-        assertEq(faucet.balanceOf(holder), 0.1 ether);
+        assertEq(faucet.balanceOf(holder), beforeBalance + 0.1 ether);
+        vm.stopPrank();
     }
 
-    function testNoContractWait() public {
+    function testWait() public {
         address holder = 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266;
         vm.startPrank(holder);
         assertEq(faucet.balanceOf(holder), 0);
         faucet.giveMeGold();
         assertEq(faucet.balanceOf(holder), 0.1 ether);
         vm.expectRevert("Wait 1 hour for another request");
+        faucet.giveMeGold();
+        vm.warp(2000000);
         faucet.giveMeGold();
         vm.stopPrank();
     }

@@ -12,12 +12,13 @@ contract Faucet is ERC777 {
         ERC777("Gold", "GLD", defaultOperators, _erc_1820_registry)
     {
         _mint(address(this), 10 ether, "", "", false);
+        lastRequestTime = 0;
     }
 
 
     function giveMeGold() external {
 
-        require(block.timestamp > lastRequestTime + 1 hours, "Wait 1 hour for another request");
+        require(block.timestamp > (lastRequestTime + 1 hours), "Wait 1 hour for another request");
 
         this.transfer(msg.sender, 0.1 ether);
 

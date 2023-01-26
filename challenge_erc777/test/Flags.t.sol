@@ -9,7 +9,7 @@ contract FlagTest is Test {
     Faucet public faucet;
 
     function setUp() public {
-        faucet = Faucet(0xe7f1725e7734ce288f8367e1bb143e90bb3f0512);
+        faucet = Faucet(0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512);
     }
 
     function testFlag1() public {
@@ -17,8 +17,5 @@ contract FlagTest is Test {
             revert("Not drained");
         }
     }
-
-    // function testFlag2() public {
-    // }
 
 }
