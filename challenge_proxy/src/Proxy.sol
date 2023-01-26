@@ -11,7 +11,7 @@ contract Proxy {
         testVariable = 0;
     }
 
-    fallback () payable external {
+    fallback () external {
         address impl = implementation;
 
         assembly {
