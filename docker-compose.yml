@@ -15,23 +15,37 @@ services:
       - "6000:80"
     #network_mode: "host"
 
-  challenge1:
+  challenge_simple:
     image: ferranhalborn/ctf_ad_base
     environment:
        - RESTRICTED_ACCOUNTS=["0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"]
     volumes:
-      - "./challenge:/root/challenge"
+      - "./challenge_simple:/root/challenge"
 
   challenge_proxy:
     image: ferranhalborn/ctf_ad_base
     environment:
        - RESTRICTED_ACCOUNTS=["0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"]
     volumes:
-      - "./challenge:/root/challenge"
+      - "./challenge_proxy:/root/challenge"
+
+  challenge_erc777:
+    image: ferranhalborn/ctf_ad_base
+    environment:
+       - RESTRICTED_ACCOUNTS=[]
+    volumes:
+      - "./challenge_erc777:/root/challenge"
+
+  challenge_lotto:
+    image: ferranhalborn/ctf_ad_base
+    environment:
+       - RESTRICTED_ACCOUNTS=[]
+    volumes:
+      - "./challenge_lotto:/root/challenge"
 
   challenge_token:
     image: ferranhalborn/ctf_ad_base
     environment:
        - RESTRICTED_ACCOUNTS=["0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"]
     volumes:
-      - "./challenge:/root/challenge"
+      - "./challenge_token:/root/challenge"
