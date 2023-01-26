@@ -1,0 +1,17 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "TestTour",
+  "steps": [
+    {
+      "file": "foundry.toml",
+      "description": "Adding content",
+      "line": 7
+    },
+    {
+      "file": "script/deploy.sol",
+      "description": "This is an issue",
+      "line": 14
+    }
+  ],
+  "ref": "main"
+}

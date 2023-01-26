@@ -1,0 +1,16 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "testrecord",
+  "steps": [
+    {
+      "file": "foundry.toml",
+      "description": "This is a file",
+      "line": 3
+    },
+    {
+      "file": "src/Challenge1.sol",
+      "description": "Issue here",
+      "line": 18
+    }
+  ]
+}

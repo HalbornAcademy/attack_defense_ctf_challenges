@@ -22,3 +22,16 @@ services:
     volumes:
       - "./challenge:/root/challenge"
 
+  challenge_proxy:
+    image: ferranhalborn/ctf_ad_base
+    environment:
+       - RESTRICTED_ACCOUNTS=["0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"]
+    volumes:
+      - "./challenge:/root/challenge"
+
+  challenge_token:
+    image: ferranhalborn/ctf_ad_base
+    environment:
+       - RESTRICTED_ACCOUNTS=["0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"]
+    volumes:
+      - "./challenge:/root/challenge"

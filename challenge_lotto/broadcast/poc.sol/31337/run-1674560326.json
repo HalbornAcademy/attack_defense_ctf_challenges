@@ -1,0 +1,49 @@
+{
+  "transactions": [
+    {
+      "hash": "0xbda07ff862aa8a43b2a5fe540d226e0478c926ea6f81dc10aea2f807ab0dc825",
+      "transactionType": "CALL",
+      "contractName": null,
+      "contractAddress": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "function": null,
+      "arguments": null,
+      "rpc": "http://127.0.0.1:8545",
+      "transaction": {
+        "type": "0x02",
+        "from": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+        "to": "0x5fbdb2315678afecb367f032d93f642f64180aa3",
+        "gas": "0x1be98",
+        "value": "0x0",
+        "data": "0x70740ac9",
+        "nonce": "0x1",
+        "accessList": []
+      },
+      "additionalContracts": []
+    }
+  ],
+  "receipts": [
+    {
+      "transactionHash": "0xbda07ff862aa8a43b2a5fe540d226e0478c926ea6f81dc10aea2f807ab0dc825",
+      "transactionIndex": "0x0",
+      "blockHash": "0xaf3b09c1b931d8d3b593fb74ccc03863e3ab51e509278ab5dfc515de40df000f",
+      "blockNumber": "0x8",
+      "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "to": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "cumulativeGasUsed": "0x14354",
+      "gasUsed": "0x14354",
+      "contractAddress": null,
+      "logs": [],
+      "status": "0x1",
+      "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "effectiveGasPrice": "0xc7623a5b"
+    }
+  ],
+  "libraries": [],
+  "pending": [],
+  "path": "/Users/fr0zn/Halborn/AttackDefense/challenge/challenge_lotto/broadcast/poc.sol/31337/run-latest.json",
+  "returns": {},
+  "timestamp": 1674560326,
+  "chain": 31337,
+  "multi": false,
+  "commit": "b406e01"
+}

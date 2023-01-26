@@ -1,0 +1,16 @@
+project_structure:
+  build: out
+  contracts: src
+  scripts: script
+  reports: reports
+  tests: test
+
+compiler:
+    evm_version: null
+    minify_source: false
+    solc:
+        optimize: false
+        runs: 200
+        version: 0.8.17
+        remappings:
+          - "@openzeppelin=lib/openzeppelin-contracts"
