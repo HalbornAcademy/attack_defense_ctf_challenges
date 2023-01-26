@@ -7,6 +7,7 @@ import "../src/Proxy.sol";
 
 contract FlagTest is Test {
     Implementation public impl;
+    Proxy public proxy;
 
     function setUp() public {
         // 0x5fbdb2315678afecb367f032d93f642f64180aa3
