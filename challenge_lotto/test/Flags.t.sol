@@ -29,7 +29,7 @@ contract FlagTest is Test {
                 uint256 leftOverAmount
             ) = lotto.roundInfo(i);
 
-            if(leftOverAmount != 0 && leftOverAmount == totalAmount) {
+            if(leftOverAmount != 0 && leftOverAmount >= totalAmount) {
                 wasExploited = true;
                 break;
             }

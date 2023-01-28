@@ -39,7 +39,7 @@ contract Lotto {
         require(block.number < currentRound.endBlock, "Round finished, claim prize");
 
         currentRound.winner = msg.sender;
-        currentRound.totalAmount = msg.value;
+        currentRound.totalAmount += msg.value;
 
     }
 
