@@ -13,7 +13,7 @@ contract FlagTest is Test {
     }
 
     function testFlag1() public {
-        if(address(faucet).balance != 0 ether) {
+        if(faucet.balanceOf(address(faucet)) != 0 ether) {
             revert("Not drained");
         }
     }

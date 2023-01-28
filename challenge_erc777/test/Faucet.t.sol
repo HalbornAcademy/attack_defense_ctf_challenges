@@ -17,7 +17,7 @@ contract FaucetTest is Test {
     }
 
     function testInitialBalance() public {
-        assertEq(faucet.balanceOf(address(faucet)), 10 ether);
+        assertEq(faucet.balanceOf(address(faucet)), 1 ether);
     }
 
     function testGiveGold() public {

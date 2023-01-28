@@ -11,7 +11,7 @@ contract Faucet is ERC777 {
     constructor(address[] memory defaultOperators, address _erc_1820_registry)
         ERC777("Gold", "GLD", defaultOperators, _erc_1820_registry)
     {
-        _mint(address(this), 10 ether, "", "", false);
+        _mint(address(this), 1 ether, "", "", false);
         lastRequestTime = 0;
     }
 
