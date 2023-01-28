@@ -24,7 +24,6 @@ contract FlagTest is Test {
     }
 
     function testFlag2() public {
-        console.log(minimetoken.balanceOf(address(challenge)));
         if(minimetoken.balanceOf(address(challenge)) >= 10 ether){
             revert("Not drained!");
         }
