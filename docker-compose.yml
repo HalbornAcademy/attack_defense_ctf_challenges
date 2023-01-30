@@ -49,3 +49,10 @@ services:
        - RESTRICTED_ACCOUNTS=["0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"]
     volumes:
       - "./challenge_token:/root/challenge"
+
+  challenge_flash:
+    image: ferranhalborn/ctf_ad_base
+    environment:
+       - RESTRICTED_ACCOUNTS=["0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266"]
+    volumes:
+      - "./challenge_flash:/root/challenge"
