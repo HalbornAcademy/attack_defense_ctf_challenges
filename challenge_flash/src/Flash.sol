@@ -27,18 +27,22 @@ contract FlashPool {
 
     require(address(this).balance >= balanceBefore, "Flash loan hasn't been paid back");
   }
+
+  receive() payable external {
+
+  }
 }
 
 contract ReceiverMock is IFlashLoanEtherReceiver {
   FlashPool immutable pool;
 
   constructor(address target) {
-    pool = FlashPool(target);
+    pool = FlashPool(payable(target));
   }
 
   function execute() external payable override {
     // Return funds
-    pool.deposit{value: msg.value}();
+    payable(address(pool)).transfer(msg.value);
   }
 
   // required to receive ether

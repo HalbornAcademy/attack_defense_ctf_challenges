@@ -10,7 +10,7 @@ contract FlagTest is Test {
 
     function setUp() public {
         // 0x5fbdb2315678afecb367f032d93f642f64180aa3
-        pool = FlashPool(0x5FbDB2315678afecb367f032d93F642f64180aa3);
+        pool = FlashPool(payable(0x5FbDB2315678afecb367f032d93F642f64180aa3));
     }
 
     function testFlag1() public {

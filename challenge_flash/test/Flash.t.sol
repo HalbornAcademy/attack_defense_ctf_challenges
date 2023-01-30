@@ -13,7 +13,7 @@ contract FlashTest is Test {
     function setUp() public {
         vm.startPrank(owner);
         flash = new FlashPool();
-        mock = new ReceiverMock(address(flash));
+        mock = new ReceiverMock(address(payable(flash)));
     }
 
     function testDeposit() public {
