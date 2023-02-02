@@ -1,6 +1,6 @@
 import requests
 
-MASTER_IP = 'TODO'
+MASTER_IP = '100.127.117.59'
 
 MY_IP = 'TODO'
 
